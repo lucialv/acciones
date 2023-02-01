@@ -10,8 +10,8 @@ guapo = None
 
 
 try:
-    nombre = str(input("Como te llamas? ")).capitalize()
-    sexo = str(input("Eres masculino o femenino?: ")).lower()
+    nombre = input("Como te llamas? ").capitalize()
+    sexo = input("Como te identificas?: ").lower()
     años = int(input("Cuando naciste? "+(', '.join(map(str, asd)))))
     guapo = input("Eres guapo? ").lower()
     resultado1 = int(input("Dime tu altura: "))
@@ -37,22 +37,17 @@ def Atractivo():
 resultado = 2022-años
 
 
-def sexo():
-    if sexo.find("masculino"):
-        print("Te identificas como un chico")
-    elif sexo.find("femenino"):
-        print("Te identificas como una chica")
-    else:
-        print("Te identificas como otra cosa")
+def Sexo():
+    print(f"Te identificas como {sexo}")
 
 
 def Edad():
 
     try:
         if resultado >= 40:
-            print("Tienes "+str(resultado)+" años, puto viejo!")
+            print(f"Tienes {resultado} años, puto viejo!")
         elif resultado <= 39:
-            print("Tienes "+str(resultado)+" años.")
+            print(f"Tienes {resultado} años.")
     except TypeError:
         pass
     finally:
@@ -62,24 +57,18 @@ def Edad():
 def Altura():
     try:
         if resultado1 >= 190:
-            print("Mides "+str(resultado1)+"cm, puta torre.")
+            print(f"Mides {resultado1} cm, puta torre.")
         elif resultado1 <= 189:
-            print("Mides "+str(resultado1)+"cm.")
+            print(f"Mides {resultado1} cm.")
     except TypeError:
         pass
     finally:
         pass
-# tz_NY = pytz.timezone('America/New_York')
-# datetime_NY = datetime.now(tz_NY)
-# print("NY time:", datetime_NY.strftime("%H:%M:%S"))
 
 
 def Vivir():
     try:
-        if vivir:
-            print("Mides "+str(resultado1)+"cm, puta torre.")
-        elif vivir <= 189:
-            print("Mides "+str(resultado1)+"cm.")
+        print(f"Vives en {vivir}")
     except TypeError:
         pass
     finally:
@@ -87,10 +76,11 @@ def Vivir():
 
 
 print("Hola "+nombre)
-sexo()
+Sexo()
 Edad()
 Altura()
 Atractivo()
+Vivir()
 
 my_date = datetime.datetime.now(pytz.timezone('EUROPE/MADRID'))
 data = str(my_date)

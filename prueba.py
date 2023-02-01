@@ -34,11 +34,11 @@ def Atractivo():
         print("No te entiendo gilipollas")
 
 
-resultado = 2022-años
-
-
 def Sexo():
     print(f"Te identificas como {sexo}")
+
+
+resultado = 2022-años
 
 
 def Edad():

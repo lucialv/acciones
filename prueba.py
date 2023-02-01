@@ -14,7 +14,7 @@ try:
     sexo = input("Como te identificas?: ").lower()
     años = int(input("Cuando naciste? "+(', '.join(map(str, asd)))))
     guapo = input("Eres guapo? ").lower()
-    resultado1 = int(input("Dime tu altura: "))
+    altura = int(input("Dime tu altura: "))
     vivir = input("Donde vives? ")
 
 except ValueError:
@@ -56,26 +56,26 @@ def Edad():
 
 def Altura():
     try:
-        if resultado1 >= 190:
-            print(f"Mides {resultado1} cm, puta torre.")
-        elif resultado1 <= 189:
-            print(f"Mides {resultado1} cm.")
+        if altura >= 190:
+            print(f"Mides {altura} cm, puta torre.")
+        elif altura <= 189:
+            print(f"Mides {altura} cm.")
     except TypeError:
-        pass
+        NameError
     finally:
         pass
 
 
 def Vivir():
     try:
-        print(f"Vives en {vivir}")
+        print(f"Vives en {vivir}.")
     except TypeError:
         pass
     finally:
         pass
 
 
-print("Hola "+nombre)
+print("-------------------------------------------\nHola "+nombre)
 Sexo()
 Edad()
 Altura()
@@ -84,4 +84,4 @@ Vivir()
 
 my_date = datetime.datetime.now(pytz.timezone('EUROPE/MADRID'))
 data = str(my_date)
-print("Programa ejecutado el " + data)
+print("-------------------------------------------\nPrograma ejecutado el " + data)

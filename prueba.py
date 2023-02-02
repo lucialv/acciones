@@ -65,7 +65,6 @@ def Altura():
     finally:
         pass
 
-
 def Vivir():
     try:
         print(f"Vives en {vivir}.")

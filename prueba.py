@@ -14,12 +14,11 @@ try:
     sexo = input("Como te identificas?: ").lower()
     años = int(input("Cuando naciste? "+(', '.join(map(str, asd)))))
     guapo = input("Eres guapo? ").lower()
-    altura = int(input("Dime tu altura: "))
+    altura = float(input("Dime tu altura: "))
     vivir = input("Donde vives? ")
 
 except ValueError:
     print("No puedes poner letras tonto.")
-    pass
 
 finally:
     pass
@@ -58,8 +57,8 @@ def Altura():
             print(f"Mides {altura} cm, puta torre.")
         elif altura <= 189:
             print(f"Mides {altura} cm.")
-    except TypeError:
-        NameError
+    except ValueError:
+        print("Por favor ingresa un número válido.")
     finally:
         pass
 

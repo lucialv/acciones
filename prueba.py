@@ -72,7 +72,7 @@ def Vivir():
 
 
 if nombre.find("jan") != -1:
-    print("-------------------------------------------\nPuto chino vete al bazar a vender y dejanos en paz puta fresa")
+    print("-------------------------------------------\nHola"+ nombre.capitalize()+" guapoo")
 else:
     print("-------------------------------------------\nHola " + nombre.capitalize())
 Sexo()

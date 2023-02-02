@@ -2,7 +2,7 @@ import pytz
 import datetime
 asd = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011,
        2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, "2022: "]
-no = ['no', 'nop', 'claro que no', 'obviamante, no', 'obvio no', 'no se']
+no = ['no', 'nop', 'claro que no', 'obviamante, no', 'obvio no', 'no se', 'jan', 'negativo', 'nopi' ]
 
 años = None
 sexo = None
@@ -10,7 +10,7 @@ guapo = None
 
 
 try:
-    nombre = input("Como te llamas? ").capitalize()
+    nombre = input("Como te llamas? ").lower()
     sexo = input("Como te identificas?: ").lower()
     años = int(input("Cuando naciste? "+(', '.join(map(str, asd)))))
     guapo = input("Eres guapo? ").lower()
@@ -26,12 +26,10 @@ finally:
 
 
 def Atractivo():
-    if guapo.find("no") != -1:
+    if any(response in guapo for response in no):
         print("Eres feo. ")
-    elif guapo.find("no") == -1:
-        print("Eres guapo. ")
     else:
-        print("No te entiendo gilipollas")
+        print("Eres guapo. ")
 
 
 def Sexo():
@@ -74,7 +72,10 @@ def Vivir():
         pass
 
 
-print("-------------------------------------------\nHola "+nombre)
+if nombre.find("jan") != -1:
+    print("-------------------------------------------\nPuto chino vete al bazar a vender y dejanos en paz puta fresa")
+else:
+    print("-------------------------------------------\nHola " + nombre.capitalize())
 Sexo()
 Edad()
 Altura()

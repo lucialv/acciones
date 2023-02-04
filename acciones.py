@@ -1,4 +1,5 @@
 import os
+import time
 os.system("cls")
 
 
@@ -54,8 +55,18 @@ def comer():
                     break
 
 
+def dormir():
+    print(f"1 ovejita...")
+    time.sleep(1)
+    os.system("cls")
+    for i in range(2, 11):
+        print(f"{i} ovejitas...")
+        time.sleep(1)
+        os.system("cls")
+
+
 while True:
-    pregunta = input(" " + "\nQue quieres hacer?: ")
+    pregunta = input("Que quieres hacer?: ")
     if pregunta == "salir":
         break
     elif pregunta == "comer":
@@ -64,3 +75,8 @@ while True:
     elif pregunta == "nevera":
         os.system("cls")
         nevera()
+    elif pregunta == "dormir":
+        os.system("cls")
+        dormir()
+    else:
+        print("No existe esa función")

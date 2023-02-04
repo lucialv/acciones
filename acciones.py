@@ -66,17 +66,18 @@ def dormir():
 
 
 while True:
-    pregunta = input("Que quieres hacer?: ")
-    if pregunta == "salir":
+    accion = input("Que quieres hacer?: ")
+    if accion == "salir":
         break
-    elif pregunta == "comer":
+    elif accion == "comer":
         os.system("cls")
         comer()
-    elif pregunta == "nevera":
+    elif accion == "nevera":
         os.system("cls")
         nevera()
-    elif pregunta == "dormir":
+    elif accion == "dormir":
         os.system("cls")
         dormir()
     else:
-        print("No existe esa función")
+        os.system("cls")
+        print(f"No existe la función {accion}")

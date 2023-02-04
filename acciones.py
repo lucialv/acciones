@@ -66,7 +66,7 @@ def dormir():
 
 
 while True:
-    accion = input("Que quieres hacer?: ")
+    accion = input("Que quieres hacer?:")
     if accion == "salir":
         break
     elif accion == "comer":

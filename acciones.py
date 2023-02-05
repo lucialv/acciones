@@ -174,8 +174,19 @@ def desvestir():
             print("No tienes ropa puesta en este momento.")
             break
 
+def sexo():
+    for i in range(1,11):
+        print("Ah")
+        time.sleep(1)
+    os.system("cls")
 
-
+def viajar():
+    viaje = input("¿A dónde quieres viajar?: ").capitalize()
+    paises = ["Afganistán","Albania","Argelia","Andorra","Angola","Antigua y Barbuda","Argentina","Armenia","Australia","Austria","Azerbaiyán","Bahamas","Bahréin","Bangladesh","Barbados","Bielorrusia","Bélgica","Belice","Benín","Bhután","Bolivia","Bosnia y Herzegovina","Botsuana","Brasil","Brunei","Bulgaria","Burkina Faso","Burundi","Bután","Cabo Verde","Camboya","Camerún","Canadá","Catar","Chad","Chile","China","Chipre","Ciudad del Vaticano","Colombia","Comoras","Congo","Corea del Norte","Corea del Sur","Costa de Marfil","Costa Rica","Croacia","Cuba","Dinamarca","Dominica","Ecuador","Egipto","El Salvador","Emiratos Árabes Unidos","Eritrea","Eslovaquia","Eslovenia","España","Estados Unidos","Estonia","Etiopía","Filipinas","Finlandia","Fiyi","Francia","Gabón","Gambia","Georgia","Ghana","Granada","Grecia","Guatemala","Guinea","Guinea-Bisáu","Guinea Ecuatorial","Guyana","Haití","Honduras","Hungría","India","Indonesia","Irak","Irán","Irlanda","Islandia","Islas Marshall","Islas Salomón","Israel","Italia","Jamaica","Japón","Jordania","Kazajistán","Kenia","Kirguistán","Kiribati","Kuwait","Laos","Lesoto","Letonia","Líbano","Liberia","Libia","Liechtenstein","Lituania","Luxemburgo","Macedonia del Norte","Madagascar","Malasia","Malaui","Maldivas","Malí","Malta","Marruecos","Mauricio","Mauritania","México","Micronesia","Moldavia","Mónaco","Mongolia","Montenegro","Mozambique","Myanmar (Birmania)","Namibia","Nauru","Nepal","Nicaragua","Níger","Nigeria","Noruega","Nueva Zelanda","Omán","Países Bajos","Pakistán","Palaos","Panamá","Papúa Nueva Guinea","Paraguay","Perú","Polonia","Portugal","Reino Unido","República Centroafricana","República Checa","República de Macedonia","República del Congo","República Democrática del Congo","República Dominicana","República Sudafricana","Ruanda","Rumanía","Rusia","Samoa","San Cristóbal y Nieves","San Marino","San Vicente y las Granadinas","Santa Lucía","Santo Tomé y Príncipe","Senegal","Serbia","Seychelles","Sierra Leona","Singapur","Siria","Somalia","Sri Lanka","Suazilandia","Sudán","Sudán del Sur","Suecia","Suiza","Surinam","Tailandia","Tanzania","Tayikistán","Timor Oriental","Togo","Tonga","Trinidad y Tobago","Túnez","Turkmenistán","Turquía","Tuvalu","Ucrania","Uganda","Uruguay","Uzbekistán","Vanuatu","Venezuela","Vietnam","Yemen","Yibuti","Zambia","Zimbabue"]
+    if viaje in paises:
+        print(f"Has viajado a: {viaje}")
+    else:
+        print(f"No creo el país {viaje} exista...")
 
 while True:
     
@@ -198,6 +209,12 @@ while True:
     elif accion == "desvestir":
         os.system("cls")
         desvestir()
+    elif accion == "sexo":
+        os.system("cls")
+        sexo()
+    elif accion == "viajar":
+        os.system("cls")
+        viajar()
     else:
         os.system("cls")
         print(f"No existe la función {accion}")

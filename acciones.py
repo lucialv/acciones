@@ -65,8 +65,23 @@ def dormir():
         os.system("cls")
 
 
+def vestir():
+    ropa = None
+    ropa_valida = ["pantalones", "pantalón", "pantalon", "sudadera", "camiseta", "camiseta de manga corta", "camisa", "zapatos", "calzoncillos", "calcetines", "bambas", "collar", "falda", "vestido", "top", "sandalias", "chanclas", "blusa", "mono", "collares", "anillos",
+                   "anillo", "mascarilla", "pendiente", "pendientes", "bolso", "bolsos", "mochila", "mochilas", "pantalón corto", "pantalon corto", "shorts", "short", "bragas", "bufanda", "gorra", "bandana", "capa", "chaqueta", "chaquetas", "medias", "uniforme", "gafas", "gafas de sol"]
+    while ropa != "salir":
+        ropa = input("Que te quieres poner hoy?: ").lower()
+        if any(response in ropa for response in ropa_valida):
+            print(f"Te has puesto: {ropa.capitalize()}")
+        elif ropa == "salir":
+            os.system("cls")
+            break
+        else:
+            print("Creo que no existe esa ropa...")
+
+
 while True:
-    accion = input("Que quieres hacer?:")
+    accion = input("Que quieres hacer?: ")
     if accion == "salir":
         break
     elif accion == "comer":
@@ -78,6 +93,9 @@ while True:
     elif accion == "dormir":
         os.system("cls")
         dormir()
+    elif accion == "vestir":
+        os.system("cls")
+        vestir()
     else:
         os.system("cls")
         print(f"No existe la función {accion}")

@@ -19,7 +19,7 @@ def load_foods():
 def nevera():
     comidas = load_foods()
     while True:
-        food = input("Que comida quieres añadir?: ")
+        food = input("Que comida quieres añadir?: ").lower()
         if food == "salir":
             break
         comidas.append(food)
@@ -35,7 +35,7 @@ def comer():
     else:
         while comer != "salir":
             comer = input("\nComida: 🍱\n" +
-                          "\n".join(comidas_str) + "\nQuiero comer: ")
+                          "\n".join(comidas_str) + "\nQuiero comer: ").lower()
             try:
                 if len(comidas) > 0:
                     comidas.remove(comer)
@@ -65,14 +65,37 @@ def dormir():
         os.system("cls")
 
 
+def save_clothes(ropas):
+    with open("ropa.txt", "w") as file:
+        for ropa in ropas:
+            file.write(ropa + "\n")
+
+
+def load_clothes():
+    if os.path.exists("ropa.txt"):
+        with open("ropa.txt", "r") as file:
+            return [ropa.strip() for ropa in file.readlines()]
+    return []
+
+
 def vestir():
+    ropitas = load_clothes()
     ropa = None
+    ropitas_str = [str(ropa) for ropa in ropitas]
     ropa_valida = ["pantalones", "pantalón", "pantalon", "sudadera", "camiseta", "camiseta de manga corta", "camisa", "zapatos", "calzoncillos", "calcetines", "bambas", "collar", "falda", "vestido", "top", "sandalias", "chanclas", "blusa", "mono", "collares", "anillos",
-                   "anillo", "mascarilla", "pendiente", "pendientes", "bolso", "bolsos", "mochila", "mochilas", "pantalón corto", "pantalon corto", "shorts", "short", "bragas", "bufanda", "gorra", "bandana", "capa", "chaqueta", "chaquetas", "medias", "uniforme", "gafas", "gafas de sol"]
+                   "anillo", "gorro", "sombrero", "mascarilla", "pendiente", "pendientes", "bolso", "bolsos", "mochila", "mochilas", "pantalón corto", "pantalon corto", "shorts", "short", "bragas", "bufanda", "gorra", "bandana", "capa", "chaqueta", "chaquetas", "medias", "uniforme", "gafas", "gafas de sol"]
     while ropa != "salir":
-        ropa = input("Que te quieres poner hoy?: ").lower()
+
+        if len(ropitas) <= 0:
+            ropa = input("Que te quieres poner hoy?: ").lower()
+        else:
+            print("\nActualmente tienes puesto: \n" + "\n".join(load_clothes()))
+            ropa = input("\nQuieres ponerte algo más?: ").lower()
         if any(response in ropa for response in ropa_valida):
             print(f"Te has puesto: {ropa.capitalize()}")
+            ropitas.append(ropa)
+            save_clothes(ropitas)
+
         elif ropa == "salir":
             os.system("cls")
             break

@@ -6,6 +6,7 @@ from comer import *
 from dormir import *
 from vestir import *
 from viajes import *
+from adivana_el_numero import *
 while True:
     
     accion = input("Que quieres hacer?: ").lower()
@@ -36,6 +37,12 @@ while True:
     elif accion == "donde estoy?" or accion == "donde estoy" or accion == "ubicación" or accion == "ubicacion":
         os.system("cls")
         viajo()
+    elif accion == "jugar":
+        jugar = input("A que quieres jugar?")
+        if jugar == "adivina el numero":
+            adivina_el_numero()
+        else:
+            print(f"No existe el juego {jugar}")
     else:
         os.system("cls")
         print(f"No existe la función {accion}")

@@ -7,6 +7,7 @@ from dormir import *
 from vestir import *
 from viajes import *
 from adivana_el_numero import *
+
 while True:
     
     accion = input("Que quieres hacer?: ").lower()

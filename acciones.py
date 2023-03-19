@@ -6,8 +6,10 @@ from comer import *
 from dormir import *
 from vestir import *
 from viajes import *
-from adivana_el_numero import *
 
+from matar import *
+from sumar import *
+from adivina_el_numero import *
 while True:
     
     accion = input("Que quieres hacer?: ").lower()
@@ -35,6 +37,12 @@ while True:
     elif accion == "viajar":
         os.system("cls")
         viajar()
+    elif accion == "matar":
+        os.system("cls")
+        matar()
+    elif accion == "calculadora":
+        os.system("cls")
+        calculadora()
     elif accion == "donde estoy?" or accion == "donde estoy" or accion == "ubicación" or accion == "ubicacion":
         os.system("cls")
         viajo()

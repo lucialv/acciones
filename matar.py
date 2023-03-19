@@ -26,4 +26,4 @@ def matar():
             break
         #si el arma no está en armas se ejecuta esto
         else:
-            print(f"No estoy seguro que {arma} sea un arma pero, has matado a {persona_o_cosa_para_matar} con {arma}.")
+            print(f"No estoy seguro que {arma} sea un arma pero, has matado a {persona_o_cosa_para_matar} con {arma}. ")

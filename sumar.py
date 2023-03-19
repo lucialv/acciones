@@ -38,4 +38,4 @@ def calculadora():
         elif calculo == "salir":
             break
         else:
-            print(f"Creo que no tengo {calculo}, por favor intentelo de nuevo.")
+            print(f"Creo que no tengo {calculo}, por favor intentelo de nuevo. ")

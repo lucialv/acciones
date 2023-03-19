@@ -46,7 +46,7 @@ while True:
         os.system("cls")
         viajo()
     elif accion == "jugar":
-        jugar = input("A que quieres jugar?")
+        jugar = input("A que quieres jugar? ")
         if jugar == "adivina el numero":
             adivina_el_numero()
         else:

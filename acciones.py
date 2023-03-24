@@ -6,7 +6,7 @@ from comer import *
 from dormir import *
 from vestir import *
 from viajes import *
-
+from examen import *
 from matar import *
 from sumar import *
 from adivina_el_numero import *
@@ -28,6 +28,9 @@ while True:
     elif accion == "vestir":
         os.system("cls")
         vestir()
+    elif accion == "examen":
+        os.system("cls")
+        examen()
     elif accion == "desvestir":
         os.system("cls")
         desvestir()

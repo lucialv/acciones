@@ -1,15 +1,15 @@
 import os
 import time
 os.system("cls")
-from sexo import *
-from comer import *
-from dormir import *
-from vestir import *
-from viajes import *
-from examen import *
-from matar import *
-from sumar import *
-from adivina_el_numero import *
+from actions.sexo import *
+from actions.comer import *
+from actions.dormir import *
+from actions.vestir import *
+from actions.viajes import *
+from actions.examen import *
+from actions.matar import *
+from actions.sumar import *
+from actions.adivina_el_numero import *
 while True:
     
     accion = input("Que quieres hacer?: ").lower()

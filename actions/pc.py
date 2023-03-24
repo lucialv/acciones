@@ -25,9 +25,18 @@ def meca():
         min_palabras = 5 # Establece el mínimo de palabras permitidas
         max_palabras = 50 # Establece el máximo de palabras permitidas
         os.system("cls")
-        num_palabras = int(input(f"Cuantas palabras quieres escribir (entre {min_palabras} y {max_palabras})?: "))
-        while num_palabras < min_palabras or num_palabras > max_palabras:
-            num_palabras = int(input(f"Por favor ingresa un número entre {min_palabras} y {max_palabras}: "))
+        while True:
+            try:
+                num_palabras = int(input(f"Cuantas palabras quieres escribir (entre {min_palabras} y {max_palabras})?: "))
+                try:
+                    if num_palabras < min_palabras or num_palabras > max_palabras:
+                        raise ValueError
+                    break
+                except ValueError:
+                    print(f"Por favor ingresa un número entre {min_palabras} y {max_palabras}")
+            except ValueError:
+                print("No puedes poner letras!")
+        frase = generar_frase(num_palabras)
         frase = generar_frase(num_palabras)
         frase_random = frase
         os.system("cls")
@@ -59,11 +68,13 @@ def meca():
                 palabras_incorrectas.append(palabras_random[i])
         if len(palabras_incorrectas) == 0:
             print(f"\nHas escrito la frase en {tiempo:.2f} segundos")
-            jugar_otra_vez = input("Quieres jugar otra vez? (si/no): ")
-            if jugar_otra_vez == "si":
-                continue
-            elif jugar_otra_vez == "no":
-                break
+            while True:
+                jugar_otra_vez = input("Quieres jugar otra vez? (si/no): ")
+                if jugar_otra_vez == "si":
+                    break
+                elif jugar_otra_vez == "no":
+                    estado = False
+                    break
         else:
             print(f"\nNo escribiste las siguientes palabras correctamente: {', '.join(palabras_incorrectas)}.")
             print(f"\nTu tiempo total fue de {tiempo:.2f} segundos.")
@@ -71,9 +82,11 @@ def meca():
                 print(f"\nPodrías mejorar tus dotes con el teclado")
             elif tiempo is not None and tiempo >= 50:
                 print(f"\nTe recomiendo un curso de mecanografía")
-            jugar_otra_vez = input("Quieres jugar otra vez? (si/no): ")
-            if jugar_otra_vez == "si":
-                continue
-            elif jugar_otra_vez == "no":
-                break
-            
+            while True:
+                jugar_otra_vez = input("Quieres jugar otra vez? (si/no): ")
+                if jugar_otra_vez == "si":
+                    break
+                elif jugar_otra_vez == "no":
+                    estado = False
+                    break
+

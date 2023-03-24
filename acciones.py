@@ -11,8 +11,7 @@ from actions.matar import *
 from actions.sumar import *
 from actions.adivina_el_numero import *
 while True:
-    
-    accion = input("Que quieres hacer?: ").lower()
+    accion = input("Que quieres hacer?:").lower()
     if accion == "salir" or accion == "s":
         os.system("cls")
         break

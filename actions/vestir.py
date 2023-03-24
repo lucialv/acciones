@@ -97,6 +97,9 @@ def desvestir():
                 ropitas.remove(prenda)
                 print(f"Te has quitado: {prenda.capitalize()}")
                 save_clothes(ropitas)
+            elif prenda == "salir":
+                os.system("cls")
+                break
             else:
                 os.system("cls")
                 print(f"Creo que no tienes puesto {prenda}...")

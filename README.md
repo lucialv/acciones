@@ -4,6 +4,10 @@ Python program that do actions.
 
 ## Usage
 > To run this program you must need [Python](https://www.python.org/downloads/)
+To check if you have Python you can open cmd and do this command:
+```py
+python --version
+```
 If you already have Python you only need to open "acciones.py"
 
 ## Warning

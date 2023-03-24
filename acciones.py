@@ -10,9 +10,18 @@ from actions.examen import *
 from actions.pc import *
 from actions.matar import *
 from actions.sumar import *
+from actions.help import *
 from actions.adivina_el_numero import *
 while True:
-    accion = input("Que quieres hacer?: \n-Help para ver todos las acciones\n\nAccion: ").lower()
+    accion = input("""        
+           _____ _____ _____ ____  _   _ ______  _____ 
+     /\   / ____/ ____|_   _/ __ \| \ | |  ____|/ ____|
+    /  \ | |   | |      | || |  | |  \| | |__  | (___  
+   / /\ \| |   | |      | || |  | | . ` |  __|  \___ \ 
+  / ____ \ |___| |____ _| || |__| | |\  | |____ ____) |
+ /_/    \_\_____\_____|_____\____/|_| \_|______|_____/ 
+                                                       
+                                                       \n(`help` para ver todos las acciones)\n\n-> Que quieres hacer?\n\nAccion: """).lower()
     if accion == "salir" or accion == "s":
         os.system("cls")
         break
@@ -25,6 +34,9 @@ while True:
     elif accion == "dormir":
         os.system("cls")
         dormir()
+    elif accion == "help" or accion == "ayuda":
+        os.system("cls")
+        ayuda()
     elif accion == "vestir":
         os.system("cls")
         vestir()

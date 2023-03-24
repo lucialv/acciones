@@ -34,7 +34,13 @@ def comer():
         print("No hay comida para comer, volviendo al menú principal 😓")
     else:
         while comer != "salir" or comer == "s":
-            comer = input("\nComida: 🍱\n" +
+            comer = input("""
+   _____ ____  __  __ ______ _____  
+  / ____/ __ \|  \/  |  ____|  __ \ 
+ | |   | |  | | \  / | |__  | |__) |
+ | |   | |  | | |\/| |  __| |  _  / 
+ | |___| |__| | |  | | |____| | \ \ 
+  \_____\____/|_|  |_|______|_|  \_\ \n\nComida: 🍱\n""" +
                           "\n".join(comidas_str) + "\nQuiero comer: ").lower()
             try:
                 if len(comidas) > 0:

@@ -1,5 +1,5 @@
 from timeit import default_timer as timer
-import random
+import random 
 
 def generar_frase(num_palabras):
     sustantivos = ["gato", "perro", "elefante", "mesa", "computadora", "jirafa", "televisor", "coche", "libro", "pelota", "árbol", "teléfono", "casa", "planta", "pantalla", "piso", "ciudad", "bicicleta", "reloj", "puerta", "ventana", "pared", "avión", "café", "comida", "ropa", "playa", "parque", "lago", "río", "montaña", "bosque", "campo", "telescopio", "microscopio", "guitarra", "piano", "batería", "violín", "flauta", "trompeta", "tambor", "helicóptero", "barco", "tren", "autobús", "metro", "taxi"]
@@ -19,23 +19,32 @@ def generar_frase(num_palabras):
     return frase.strip()
 
 def pc():
-    num_palabras = int(input("Cuantas palabras quieres escribir?: "))# Este es el número de palabras que quieres en la frase
+    min_palabras = 5 # Establece el mínimo de palabras permitidas
+    max_palabras = 50 # Establece el máximo de palabras permitidas
+    num_palabras = int(input(f"Cuantas palabras quieres escribir (entre {min_palabras} y {max_palabras})?: "))
+    while num_palabras < min_palabras or num_palabras > max_palabras:
+        num_palabras = int(input(f"Por favor ingresa un número entre {min_palabras} y {max_palabras}: "))
     frase = generar_frase(num_palabras)
     frase_random = frase
     input(f"Escribe esta frase lo más rápido que puedas: \n--> {frase}\n\nPresiona Enter para empezar...\n\n")
     start = timer()
-    frase = input("Escribe la frase: ")
+    frase_usuario = input("Escribe la frase: ")
     end = timer()
     tiempo = end - start
-    if frase == frase_random:
+    palabras_usuario = frase_usuario.split()
+    palabras_random = frase_random.split()
+    palabras_incorrectas = []
+    for i in range(len(palabras_random)):
+        if i >= len(palabras_usuario) or palabras_usuario[i] != palabras_random[i]:
+            palabras_incorrectas.append(palabras_random[i])
+    if len(palabras_incorrectas) == 0:
         print(f"Has escrito la frase en {tiempo:.2f} segundos")
     else:
-        print("No creo que hayas escrito la frase correctamente!")
-    if tiempo is not None and tiempo >= 40 and tiempo < 50:
-        print(f"Podrías mejorar tus dotes con el teclado")
-    elif tiempo is not None and tiempo >= 50:
-        print(f"Te recomiendo un curso de mecanografía")
-
-
+        print(f"No escribiste las siguientes palabras correctamente: {', '.join(palabras_incorrectas)}.")
+        print(f"Tu tiempo total fue de {tiempo:.2f} segundos.")
+        if tiempo is not None and tiempo >= 40 and tiempo < 50:
+            print(f"Podrías mejorar tus dotes con el teclado")
+        elif tiempo is not None and tiempo >= 50:
+            print(f"Te recomiendo un curso de mecanografía")
 
 pc()

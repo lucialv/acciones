@@ -7,11 +7,12 @@ from actions.dormir import *
 from actions.vestir import *
 from actions.viajes import *
 from actions.examen import *
+from actions.pc import *
 from actions.matar import *
 from actions.sumar import *
 from actions.adivina_el_numero import *
 while True:
-    accion = input("Que quieres hacer?:").lower()
+    accion = input("Que quieres hacer?: ").lower()
     if accion == "salir" or accion == "s":
         os.system("cls")
         break
@@ -45,6 +46,9 @@ while True:
     elif accion == "calculadora":
         os.system("cls")
         calculadora()
+    elif accion == "meca":
+        os.system("cls")
+        meca()
     elif accion == "donde estoy?" or accion == "donde estoy" or accion == "ubicación" or accion == "ubicacion":
         os.system("cls")
         viajo()

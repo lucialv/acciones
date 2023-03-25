@@ -9,8 +9,11 @@ from actions.viajes import *
 from actions.examen import *
 from actions.pc import *
 from actions.matar import *
+from actions.banco import *
+from actions.inventario import *
 from actions.sumar import *
 from actions.help import *
+from actions.tienda import *
 from actions.drogas import *
 from actions.adivina_el_numero import *
 while True:
@@ -65,6 +68,15 @@ while True:
     elif accion == "drogas":
         os.system("cls")
         drogas()
+    elif accion == "banco" or accion == "balance" or accion == "dinero":
+        os.system("cls")
+        leer_dinero()
+    elif accion == "tienda" or accion == "shop":
+        os.system("cls")
+        tienda()
+    elif accion == "inventario" or accion == "inventory":
+        os.system("cls")
+        inventario()
     elif accion == "donde estoy?" or accion == "donde estoy" or accion == "ubicación" or accion == "ubicacion":
         os.system("cls")
         viajo()

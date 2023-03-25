@@ -7,8 +7,8 @@ def drogas():
 
     droguitas = True
     while droguitas:
-        drogas_naturales = ["Marihuana", "Crack", "Opio"]
-        drogas_quimicas = ["Cocaina", "Metanfetamina", "Heroina", "Extasis", "PCP", "Barbituricos"]
+        drogas_naturales = ["Marihuana", "Crack", "Opio", "Maria"]
+        drogas_quimicas = ["Cocaina", "Coca", "Metanfeta", "Meta", "Metanfetamina", "Heroina", "Extasis", "PCP", "Barbituricos"]
         plantaciones_naturales = ["Atico", "Isla privada", "Invernadero"]
         plantaciones_quimicas = ["Laboratorio", "Subterraneo", "Bunker"]
 
@@ -61,6 +61,4 @@ def drogas():
             elif lugar in plantaciones_quimicas and pregunta in drogas_naturales:
                 print(f"No puedes plantar droga natural en una plantación quimica!")
                 continue
-
-drogas()
 

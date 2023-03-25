@@ -16,7 +16,15 @@ def load_foods():
 def nevera():
     comidas = load_foods()
     while True:
-        food = input("Que comida quieres añadir?: ").lower()
+        food = input("""
+  _   _ ________      ________ _____            
+ | \ | |  ____\ \    / /  ____|  __ \     /\    
+ |  \| | |__   \ \  / /| |__  | |__) |   /  \   
+ | . ` |  __|   \ \/ / |  __| |  _  /   / /\ \  
+ | |\  | |____   \  /  | |____| | \ \  / ____ \ 
+ |_| \_|______|   \/   |______|_|  \_\/_/    \_\ 
+                                                
+                                               \n\n Que comida quieres añadir?: """).lower()
         if food == "salir" or food == "s":
             os.system("cls")
             break
@@ -34,7 +42,13 @@ def comer():
         print("No hay comida para comer, volviendo al menú principal 😓")
     else:
         while comer != "salir" or comer == "s":
-            comer = input("\nComida: 🍱\n" +
+            comer = input("""
+   _____ ____  __  __ ______ _____  
+  / ____/ __ \|  \/  |  ____|  __ \ 
+ | |   | |  | | \  / | |__  | |__) |
+ | |   | |  | | |\/| |  __| |  _  / 
+ | |___| |__| | |  | | |____| | \ \ 
+  \_____\____/|_|  |_|______|_|  \_\ \n\nComida: 🍱\n""" +
                           "\n".join(comidas_str) + "\nQuiero comer: ").lower()
             try:
                 if len(comidas) > 0:

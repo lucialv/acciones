@@ -26,7 +26,15 @@ def dividir():
 def calculadora():
     calculo = None
     while calculo != "salir":
-        calculo = input("Que quieres? ¿Sumar, multiplicar, restar o dividir? ").lower()
+        calculo = input("""
+   _____          _      _____ _    _ _               _____   ____  _____            
+  / ____|   /\   | |    / ____| |  | | |        /\   |  __ \ / __ \|  __ \     /\    
+ | |       /  \  | |   | |    | |  | | |       /  \  | |  | | |  | | |__) |   /  \   
+ | |      / /\ \ | |   | |    | |  | | |      / /\ \ | |  | | |  | |  _  /   / /\ \  
+ | |____ / ____ \| |___| |____| |__| | |____ / ____ \| |__| | |__| | | \ \  / ____ \ 
+  \_____/_/    \_\______\_____|\____/|______/_/    \_\_____/ \____/|_|  \_\/_/    \_\ 
+                                                                                     
+                                                                                     \n\nQue quieres? ¿Sumar, multiplicar, restar o dividir? """).lower()
         if calculo == "sumar":
             sumar()
         elif calculo == "restar":

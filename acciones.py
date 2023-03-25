@@ -7,12 +7,25 @@ from actions.dormir import *
 from actions.vestir import *
 from actions.viajes import *
 from actions.examen import *
+from actions.pc import *
 from actions.matar import *
+from actions.banco import *
+from actions.inventario import *
 from actions.sumar import *
+from actions.help import *
+from actions.tienda import *
+from actions.drogas import *
 from actions.adivina_el_numero import *
 while True:
-    
-    accion = input("Que quieres hacer?:").lower()
+    accion = input("""        
+           _____ _____ _____ ____  _   _ ______  _____ 
+     /\   / ____/ ____|_   _/ __ \| \ | |  ____|/ ____|
+    /  \ | |   | |      | || |  | |  \| | |__  | (___  
+   / /\ \| |   | |      | || |  | | . ` |  __|  \___ \ 
+  / ____ \ |___| |____ _| || |__| | |\  | |____ ____) |
+ /_/    \_\_____\_____|_____\____/|_| \_|______|_____/ 
+                                                       
+                                                       \n(`help` para ver todos las acciones)\n\n-> Que quieres hacer?\n\nAccion: """).lower()
     if accion == "salir" or accion == "s":
         os.system("cls")
         break
@@ -25,6 +38,9 @@ while True:
     elif accion == "dormir":
         os.system("cls")
         dormir()
+    elif accion == "help" or accion == "ayuda" or accion == "comandos":
+        os.system("cls")
+        ayuda()
     elif accion == "vestir":
         os.system("cls")
         vestir()
@@ -46,6 +62,21 @@ while True:
     elif accion == "calculadora":
         os.system("cls")
         calculadora()
+    elif accion == "meca":
+        os.system("cls")
+        meca()
+    elif accion == "drogas":
+        os.system("cls")
+        drogas()
+    elif accion == "banco" or accion == "balance" or accion == "dinero":
+        os.system("cls")
+        leer_dinero()
+    elif accion == "tienda" or accion == "shop":
+        os.system("cls")
+        tienda()
+    elif accion == "inventario" or accion == "inventory":
+        os.system("cls")
+        inventario()
     elif accion == "donde estoy?" or accion == "donde estoy" or accion == "ubicación" or accion == "ubicacion":
         os.system("cls")
         viajo()

@@ -53,7 +53,15 @@ def vestir():
 
         if len(ropitas) <= 0:
             os.system("cls")
-            ropa = input("Que te quieres poner hoy?: ").lower()
+            ropa = input("""
+ __      ________  _____ _______ _____ _____  
+ \ \    / /  ____|/ ____|__   __|_   _|  __ \ 
+  \ \  / /| |__  | (___    | |    | | | |__) |
+   \ \/ / |  __|  \___ \   | |    | | |  _  / 
+    \  /  | |____ ____) |  | |   _| |_| | \ \ 
+     \/   |______|_____/   |_|  |_____|_|  \_\ 
+                                              
+                                              \n\nQue te quieres poner hoy?: """).lower()
         else:
             print("\nActualmente tienes puesto: \n" + "\n".join(load_clothes()))
             ropa = input("\nQuieres ponerte algo más?: ").lower()
@@ -90,13 +98,25 @@ def desvestir():
     while prenda != "salir" or prenda != "s":
         if len(ropitas) > 0:
             
-            print("\nActualmente tienes puesto: \n" + "\n".join(ropitas))
+            print("""
+  _____  ______  _______      ________  _____ _______ _____ _____  
+ |  __ \|  ____|/ ____\ \    / /  ____|/ ____|__   __|_   _|  __ \ 
+ | |  | | |__  | (___  \ \  / /| |__  | (___    | |    | | | |__) |
+ | |  | |  __|  \___ \  \ \/ / |  __|  \___ \   | |    | | |  _  / 
+ | |__| | |____ ____) |  \  /  | |____ ____) |  | |   _| |_| | \ \ 
+ |_____/|______|_____/    \/   |______|_____/   |_|  |_____|_|  \_\ 
+                                                                   
+                                                                   
+                                                                \n\nActualmente tienes puesto: \n""" + "\n".join(ropitas))
             prenda = input("\n¿Qué prenda te quieres quitar?: ").lower()
             if prenda in ropitas:
                 os.system("cls")
                 ropitas.remove(prenda)
                 print(f"Te has quitado: {prenda.capitalize()}")
                 save_clothes(ropitas)
+            elif prenda == "salir":
+                os.system("cls")
+                break
             else:
                 os.system("cls")
                 print(f"Creo que no tienes puesto {prenda}...")

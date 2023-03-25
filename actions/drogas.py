@@ -1,4 +1,5 @@
 import random
+import os
 
 def drogas():
     # Carga el saldo actual desde el archivo de texto
@@ -42,10 +43,12 @@ def drogas():
                 while True:
                     respuesta = input("¿Quieres seguir plantando drogas? (si o no): ").lower()
                     if respuesta == "no":
+                        os.system("cls")
                         plantando = False
                         droguitas = False
                         break
                     elif respuesta == "si":
+                        os.system("cls")
                         plantando = False
                         break
             elif lugar in plantaciones_quimicas and pregunta in drogas_quimicas:
@@ -57,10 +60,12 @@ def drogas():
                 while True:
                     respuesta = input("¿Quieres seguir plantando drogas? (si o no): ").lower()
                     if respuesta == "no":
+                        os.system("cls")
                         plantando = False
                         droguitas = False
                         break
                     elif respuesta == "si":
+                        os.system("cls")
                         plantando = False
                         break
             elif lugar in plantaciones_naturales and pregunta in drogas_quimicas:

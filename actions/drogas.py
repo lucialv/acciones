@@ -12,7 +12,15 @@ def drogas():
         plantaciones_naturales = ["Atico", "Isla privada", "Invernadero"]
         plantaciones_quimicas = ["Laboratorio", "Subterraneo", "Bunker"]
 
-        pregunta = input("¿Qué droga quieres cultivar?: ").capitalize()
+        pregunta = input(""" 
+  _____  _____    ____   _____           _____ 
+ |  __ \|  __ \  / __ \ / ____|   /\    / ____|
+ | |  | | |__)  | |  | | |  __   /  \  | (___  
+ | |  | |  _  / | |  | | | |_ | / /\ \  \___ \ 
+ | |__| | | \ \ | |__| | |__| |/ ____ \ ____) |
+ |_____/|_|  \_\ \____/ \_____/_/    \_\_____/ 
+                                              
+                                              \n\n¿Qué droga quieres cultivar?: """).capitalize()
 
         while pregunta not in drogas_naturales and pregunta not in drogas_quimicas:
             pregunta = input("Esa droga no está en la lista. Por favor, elige una droga de la lista: ").capitalize()

@@ -38,7 +38,7 @@ while True:
     elif accion == "dormir":
         os.system("cls")
         dormir()
-    elif accion == "help" or accion == "ayuda":
+    elif accion == "help" or accion == "ayuda" or accion == "comandos":
         os.system("cls")
         ayuda()
     elif accion == "vestir":

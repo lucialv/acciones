@@ -2,7 +2,15 @@ import random
 import os
 
 def adivina_el_numero():
-    print("Bienvenido al juego 'Adivina el número'")
+    print("""     
+       _ _    _  _____          _____  
+      | | |  | |/ ____|   /\   |  __ \ 
+      | | |  | | |  __   /  \  | |__) |
+  _   | | |  | | | |_ | / /\ \ |  _  / 
+ | |__| | |__| | |__| |/ ____ \| | \ \ 
+  \____/ \____/ \_____/_/    \_\_|  \_\ 
+                                       
+                                       \n\nBienvenido al juego 'Adivina el número'""")
     numero_a_adivinar = random.randint(1, 100)
     juego_activo = True
     rondas = 0

@@ -27,7 +27,15 @@ def meca():
         os.system("cls")
         while True:
             try:
-                num_palabras = int(input(f"Cuantas palabras quieres escribir (entre {min_palabras} y {max_palabras})?: "))
+                num_palabras = int(input(f"""
+  __  __ ______ _____          
+ |  \/  |  ____/ ____|   /\    
+ | \  / | |__ | |       /  \   
+ | |\/| |  __|| |      / /\ \  
+ | |  | | |___| |____ / ____ \ 
+ |_|  |_|______\_____/_/    \_\ 
+                               
+                               \n\nCuantas palabras quieres escribir (entre {min_palabras} y {max_palabras})?: """))
                 try:
                     if num_palabras < min_palabras or num_palabras > max_palabras:
                         raise ValueError

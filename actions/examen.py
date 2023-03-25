@@ -1,4 +1,13 @@
 def examen():
+    print("""
+  ________   __          __  __ ______ _   _ 
+ |  ____\ \ / /    /\   |  \/  |  ____| \ | |
+ | |__   \ V /    /  \  | \  / | |__  |  \| |
+ |  __|   > <    / /\ \ | |\/| |  __| | . ` |
+ | |____ / . \  / ____ \| |  | | |____| |\  |
+ |______/_/ \_\/_/    \_\_|  |_|______|_| \_|
+                                             
+                                             \n\n""")
     pregunta_1 = input("¿Quien es el creador de este código? ").lower()
     pregunta_2 = input("¿Cuando nací? ")
     pregunta_3 = input("¿En que año estamos ahora mismo? ")

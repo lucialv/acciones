@@ -16,7 +16,15 @@ def load_foods():
 def nevera():
     comidas = load_foods()
     while True:
-        food = input("Que comida quieres añadir?: ").lower()
+        food = input("""
+  _   _ ________      ________ _____            
+ | \ | |  ____\ \    / /  ____|  __ \     /\    
+ |  \| | |__   \ \  / /| |__  | |__) |   /  \   
+ | . ` |  __|   \ \/ / |  __| |  _  /   / /\ \  
+ | |\  | |____   \  /  | |____| | \ \  / ____ \ 
+ |_| \_|______|   \/   |______|_|  \_\/_/    \_\ 
+                                                
+                                               \n\n Que comida quieres añadir?: """).lower()
         if food == "salir" or food == "s":
             os.system("cls")
             break

@@ -8,6 +8,14 @@ def inventario():
     else:
         with open('inventario.txt', 'r') as f:
             inventario = json.load(f)
-    print("Inventario:")
+    print("""
+  _____ _   ___      ________ _   _ _______       _____  _____ ____  
+ |_   _| \ | \ \    / /  ____| \ | |__   __|/\   |  __ \|_   _/ __ \ 
+   | | |  \| |\ \  / /| |__  |  \| |  | |  /  \  | |__) | | || |  | |
+   | | | . ` | \ \/ / |  __| | . ` |  | | / /\ \ |  _  /  | || |  | |
+  _| |_| |\  |  \  /  | |____| |\  |  | |/ ____ \| | \ \ _| || |__| |
+ |_____|_| \_|   \/   |______|_| \_|  |_/_/    \_\_|  \_\_____\____/ 
+                                                                     
+                                                                     \n\nInventario:""")
     for key, value in inventario.items():
         print(f"{key}: {value}")

@@ -2,7 +2,15 @@ def matar():
     armas = ["cuchillo", "ak-47", "pistola", "metralleta", "llaves","katana", ""]
     persona_o_cosa_para_matar = None
     while persona_o_cosa_para_matar != "salir":
-        persona_o_cosa_para_matar = input("Que quieres matar hoy? ").lower()
+        persona_o_cosa_para_matar = input("""
+  __  __       _______       _____  
+ |  \/  |   /\|__   __|/\   |  __ \ 
+ | \  / |  /  \  | |  /  \  | |__) |
+ | |\/| | / /\ \ | | / /\ \ |  _  / 
+ | |  | |/ ____ \| |/ ____ \| | \ \ 
+ |_|  |_/_/    \_\_/_/    \_\_|  \_\ 
+                                    
+                                    \n\nQue quieres matar hoy? """).lower()
 
         #Si la persona que queremos matar es igual a salir entonces nos saldremos del programa
         if persona_o_cosa_para_matar == "salir":

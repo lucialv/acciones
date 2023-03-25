@@ -11,6 +11,7 @@ from actions.pc import *
 from actions.matar import *
 from actions.sumar import *
 from actions.help import *
+from actions.drogas import *
 from actions.adivina_el_numero import *
 while True:
     accion = input("""        
@@ -61,6 +62,9 @@ while True:
     elif accion == "meca":
         os.system("cls")
         meca()
+    elif accion == "drogas":
+        os.system("cls")
+        drogas()
     elif accion == "donde estoy?" or accion == "donde estoy" or accion == "ubicación" or accion == "ubicacion":
         os.system("cls")
         viajo()

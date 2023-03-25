@@ -4,10 +4,16 @@ import os
 
 def tienda():
     productos = {
-        "1": ("iPhone", 1000),
-        "2": ("MacBook", 2000),
-        "3": ("iPad", 500),
-        "4": ("AirPods", 250)
+        "1": ("iPhone", 1100),
+        "2": ("MacBook", 8000),
+        "3": ("iPad", 800),
+        "4": ("AirPods", 250),
+        "5": ("Pc gaming", 2000),
+        "6": ("Ferrari", 100000),
+        "7": ("Lamborghini", 250000),
+        "8": ("Mansion", 1500000),
+        "9": ("Barco", 100000),
+        "10": ("Oficinas", 1000000)
     }
 
     # Verificar si el archivo de dinero existe y si está vacío

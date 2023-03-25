@@ -18,7 +18,7 @@ def drogas():
 
 
 
-    elif lugar in plantaciones_quimicas:
+    elif lugar in plantaciones_quimicas: #cambiar
         print(f"Has plantado {pregunta} en {lugar}.")
     
-drogas()
+drogas() #ejecutas la funcion

@@ -16,6 +16,6 @@ def inventario():
   _| |_| |\  |  \  /  | |____| |\  |  | |/ ____ \| | \ \ _| || |__| |
  |_____|_| \_|   \/   |______|_| \_|  |_/_/    \_\_|  \_\_____\____/ 
                                                                      
-                                                                     \n\nInventario:""")
+                                                                     \n\n""")
     for key, value in inventario.items():
         print(f"{key}: {value}")

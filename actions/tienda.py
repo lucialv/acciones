@@ -3,8 +3,8 @@ import os
 
 def tienda():
     productos = {
-        "1": ("iPhone", 1100),
-        "2": ("MacBook", 8000),
+        "1": ("Movil iPhone", 1100),
+        "2": ("MacBook", 2000),
         "3": ("iPad", 800),
         "4": ("AirPods", 250),
         "5": ("Pc gaming", 2000),
@@ -12,7 +12,9 @@ def tienda():
         "7": ("Lamborghini", 250000),
         "8": ("Mansion", 1500000),
         "9": ("Barco", 100000),
-        "10": ("Oficinas", 1000000)
+        "10": ("Oficinas", 1000000),
+        "11": ("Ratón", 10),
+        "12": ("Movil Samsung", 1100)
     }
 
     # Verificar si el archivo de dinero existe y si está vacío
@@ -39,11 +41,13 @@ def tienda():
         if producto == "0":
             break
 
-        if producto not in productos.keys():
-            print("Producto no disponible")
-            continue
-
-        precio = productos[producto][1]
+        while producto not in productos.keys():
+            producto = input("Producto no disponible, ingrese un producto disponible: ")
+        
+        cantidad = int(input(f"Ingresa la cantidad de {productos[producto][0]} que quieres: "))
+        if cantidad <= 0:
+            cantidad = input("La minima cantidad es 1, ingrese una cantidad valida: ")
+        precio = productos[producto][1] * cantidad
         os.system("cls")
         print(f"El precio de {productos[producto][0]} es ${precio}")
         dinero = int(input("Ingrese el precio del producto para confirmar: "))
@@ -58,7 +62,7 @@ def tienda():
 
         # Actualizar el inventario
         if productos[producto][0] in inventario:
-            inventario[productos[producto][0]] += 1
+            inventario[productos[producto][0]] += cantidad
         else:
             inventario[productos[producto][0]] = 1
 

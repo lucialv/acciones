@@ -12,6 +12,7 @@ from actions.matar import *
 from actions.banco import *
 from actions.libro import *
 from actions.hidratacion import *
+from actions.pokedex import *
 from actions.inventario import *
 from actions.sumar import *
 from actions.help import *
@@ -84,6 +85,9 @@ while True:
     elif accion == "drogas":
         os.system("cls")
         drogas()
+    elif accion == "pokedex":
+        os.system("cls")
+        pokedex()
     elif accion == "banco" or accion == "balance" or accion == "dinero":
         os.system("cls")
         leer_dinero()

@@ -29,8 +29,8 @@ def tienda():
     else:
         with open('inventario.txt', 'r') as f:
             inventario = json.load(f)
-
-    while True:
+    estado = True
+    while estado:
         print("PRODUCTOS DISPONIBLES")
         for key, value in productos.items():
             print(f"{key}: {value[0]} (${value[1]})")
@@ -44,10 +44,11 @@ def tienda():
             continue
 
         precio = productos[producto][1]
+        os.system("cls")
         print(f"El precio de {productos[producto][0]} es ${precio}")
         dinero = int(input("Ingrese el precio del producto para confirmar: "))
 
-        if dinero < precio:
+        if dinero < precio or saldo < precio:
             print("Usted no tiene el dinero suficiente o no has escrito la cantidad de dinero adecuada para este objeto!")
             continue
 
@@ -64,10 +65,19 @@ def tienda():
         with open('inventario.txt', 'w') as f:
             json.dump(inventario, f)
 
-        print(f"Usted compró {productos[producto][0]} por ${precio}")
+        otra_vez = input(f"Usted compró {productos[producto][0]} por ${precio}, quieres volver a la tienda o deseas salir? ")
+        while True:
+            if otra_vez == "volver":
+                break
+            elif otra_vez == "salir":
+                estado = False
+                break
+            else:
+                otra_vez = input("No le he entendido bien, deseas salir o volver? ")
+
 
     # Mostrar el inventario al final
-    print("INVENTARIO")
+    print("\nINVENTARIO")
     for key, value in inventario.items():
         print(f"{key}: {value}")
 

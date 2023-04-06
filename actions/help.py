@@ -1,2 +1,2 @@
 def ayuda():
-    print("Acciones:\n- Calculadora \n- Comer \n- Desvestir \n- Dormir \n- Drogas \n- Examen \n- Matar \n- Mecanografia(meca) \n- Nevera \n- Sexo \n- Tienda \n- Ubicacion \n- Vestir \n- Viajar")
+    print("Acciones:\n- Apostar \n- Calculadora \n- Comer \n- Desvestir \n- Diario \n- Dormir \n- Drogas \n- Examen \n- Hidratarse \n- Libro \n- Matar \n- Mecanografia(meca) \n- Nevera \n-Pokedex \n- Sexo \n- Tienda \n- Ubicacion \n- Vestir \n- Viajar")

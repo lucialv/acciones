@@ -28,6 +28,7 @@ def nevera():
         if food == "salir" or food == "s":
             os.system("cls")
             break
+        print(f" Has añadido {food} a la nevera.")
         comidas.append(food)
     save_foods(comidas)
     os.system("cls")

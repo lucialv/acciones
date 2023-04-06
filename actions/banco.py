@@ -9,6 +9,6 @@ def leer_dinero():
  | |_) / ____ \| |\  | |___| |__| |
  |____/_/    \_\_| \_|\_____\____/ 
                                                                
-        \n\nActualmente tines {dinero_actual}$""")
+        \n\nActualmente tienes {dinero_actual}$""")
         return int(dinero_actual)
         

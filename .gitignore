@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+diario.txt
+dinero.txt
+inventario.txt
+nevera.txt
+ropa.txt

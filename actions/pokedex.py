@@ -13,27 +13,36 @@ def load_pokedex():
 
 
 def pokedex():
-    pregunta = input("Quieres añadir un pokemon a la pokedex o quieres quitar un pokemon de la pokedex?: ")
-    if pregunta == "quitar" or pregunta == "remove":
-        pokedex_remove()
-    elif pregunta == "añadir" or pregunta == "add":
-        pokedex_add()
-
+    while True:
+        pregunta = input("Quieres añadir un pokemon a la pokedex o quieres quitar un pokemon de la pokedex?: ")
+        if pregunta == "quitar" or pregunta == "remove":
+            pokedex_remove()
+        elif pregunta == "añadir" or pregunta == "add":
+            pokedex_add()
+        elif pregunta == "salir" or pregunta == "s":
+            break
+        else:
+            print("No he entendido tu respuesta.")
 
 
 def pokedex_add():
     pokemon = load_pokedex()
-    while True:
+    asdads = True
+    while asdads:
         food = input("""\n\n Que pokemon quieres añadir a la pokedex?: """).lower()
         if food == "salir" or food == "s":
             os.system("cls")
             break
         pokemon.append(food)
-        jads = input(f"Has añadido a la pokedex a {food} quieres añadir otro más? ")
-        if jads == "si":
-            continue
-        elif jads == "no":
-            break
+        jads = input(f"Has añadido a la pokedex a {food.capitalize} quieres añadir otro más? ")
+        while True:
+            if jads == "si":
+                break
+            elif jads == "no":
+                asdads = False
+                break
+            else:
+                jads = input("No he entendido tu respuesta, quieres añadir a otro más?")
     save_foods(pokemon)
     os.system("cls")
 
@@ -52,7 +61,7 @@ def pokedex_remove():
                     pokemon.remove(comer)
                     pokemon_str.remove(comer)
                     os.system("cls")
-                    print(f"\nHas quitado a {comer} de la pokedex.")
+                    print(f"\nHas quitado a {comer.capitalize()} de la pokedex.")
                     save_foods(pokemon)
             except ValueError:
                 if comer == "salir" or comer == "s":
@@ -65,4 +74,3 @@ def pokedex_remove():
                 if len(pokemon) <= 0:
                     print("\n" + "Se han acabado los pokemon de la pokedex.")
                     break   
- 

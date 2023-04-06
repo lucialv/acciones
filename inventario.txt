@@ -1,1 +1,1 @@
-{"iPhone": 3, "Mansion": 1, "Pc gaming": 1}
+{"iPhone": 3, "Mansion": 1, "Pc gaming": 3}

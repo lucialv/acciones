@@ -1,2 +1,3 @@
-camiseta larga
-pantalones
+camiseta
+medias
+falda

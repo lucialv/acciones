@@ -8,13 +8,13 @@ def examen():
  |______/_/ \_\/_/    \_\_|  |_|______|_| \_|
                                              
                                              \n\n""")
-    pregunta_1 = input("¿Quien es el creador de este código? ").lower()
-    pregunta_2 = input("¿Cuando nací? ")
+    pregunta_1 = input("¿Quien es la creadora de este código? ").lower()
+    pregunta_2 = input("¿Cuando nací? ").lower() # Esto hace que se ponga en minuscula el input
     pregunta_3 = input("¿En que año estamos ahora mismo? ")
     
     puntuacion = 0
-    respuestas_1 = ["adri", "adrian"]
-    respuestas_2 = ["2007"]
+    respuestas_1 = ["adri", "adriana", "mishu", "mishuu", "adriana la mejor"]
+    respuestas_2 = ["2007", "13 de noviembre de 2007", "13 de noviembre 2007", "13/11/2007", "13/11/07"]
     respuestas_3 = ["2023"]
 
     if pregunta_1 in respuestas_1:

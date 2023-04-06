@@ -20,7 +20,7 @@ def vestir():
     ropa_valida = ["pantalones", "pantalón", "pantalon", "sudadera", "camiseta", "camiseta manga corta", "camiseta de manga corta", "camisa", "zapatos", "calzoncillos", "calcetines", "bambas", "collar", "falda", "vestido", "top", "sandalias", "chanclas", "tacones", "blusa", "mono", "collares", "anillos",
                    "anillo", "gorro", "sombrero", "mascarilla", "pendiente", "pendientes", "bolso", "botas", "bolsos", "mochila", "mochilas", "pantalón corto", "pantalon corto", "shorts", "short", "bragas", "bufanda", "gorra", "bandana", "capa", "chaqueta", "chaquetas", "medias", "uniforme", "gafas", "gafas de sol"]
     piezas_ropa_no_permitidas = {
-        "pantalones": ["falda", "vestido", "shorts", "pantalón corto", "pantalon corto"],
+        "pantalones": ["falda", "vestido", "shorts", "pantalón corto", "pantalon corto"], #esto hace que si tienes puesto "pantalones", no te puedas poner lo que hay en esta lista
         "pantalón": ["falda", "vestido", "shorts", "pantalón corto", "pantalon corto"],
         "pantalon": ["falda", "vestido", "shorts", "pantalón corto", "pantalon corto"],
         "falda": ["pantalones", "vestido", "pantalón", "pantalon", "shorts", "pantalón corto", "pantalon corto"],

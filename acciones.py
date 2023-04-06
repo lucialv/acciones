@@ -10,10 +10,14 @@ from actions.examen import *
 from actions.pc import *
 from actions.matar import *
 from actions.banco import *
+from actions.libro import *
+from actions.hidratacion import *
 from actions.inventario import *
 from actions.sumar import *
 from actions.help import *
 from actions.tienda import *
+from actions.apostar import *
+from actions.diario import *
 from actions.drogas import *
 from actions.adivina_el_numero import *
 while True:
@@ -29,6 +33,9 @@ while True:
     if accion == "salir" or accion == "s":
         os.system("cls")
         break
+    elif accion == "apostar":
+        os.system("cls")
+        apostar()
     elif accion == "comer":
         os.system("cls")
         comer()
@@ -38,6 +45,9 @@ while True:
     elif accion == "dormir":
         os.system("cls")
         dormir()
+    elif accion == "diario":
+        os.system("cls")
+        diario()
     elif accion == "help" or accion == "ayuda" or accion == "comandos":
         os.system("cls")
         ayuda()
@@ -47,12 +57,18 @@ while True:
     elif accion == "examen":
         os.system("cls")
         examen()
+    elif accion == "libro" or accion == "leer":
+        os.system("cls")
+        libro()
     elif accion == "desvestir":
         os.system("cls")
         desvestir()
     elif accion == "sexo":
         os.system("cls")
         sexo()
+    elif accion == "hidratarse" or accion == "beber" or accion == "hidratar":
+        os.system("cls")
+        hidratacion()
     elif accion == "viajar":
         os.system("cls")
         viajar()

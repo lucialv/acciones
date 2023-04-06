@@ -21,6 +21,7 @@ def examen():
         puntuacion = puntuacion + 1
 
     respuesta_correcta_2 = False
+    
 
     for respuesta_valida in respuestas_2:
         if respuesta_valida in pregunta_2:

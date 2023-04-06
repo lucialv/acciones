@@ -26,7 +26,7 @@ def drogas():
         while pregunta not in drogas_naturales and pregunta not in drogas_quimicas:
             pregunta = input("Esa droga no está en la lista. Por favor, elige una droga de la lista: ").capitalize()
 
-        cantidad_plantada = random.randint(1, 100)
+        cantidad_plantada = random.randint(1, 10)
         cantidad_ganada = cantidad_plantada * random.randint(50, 200)
         plantando = True
         while plantando:
